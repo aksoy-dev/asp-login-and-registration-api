@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PayTestDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="CardID" />
+    </Key>
+    <Property Name="CardID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CardHolder" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CardMonth" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CardYear" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ballance" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AccountID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DOJ" Type="date" Nullable="false" />
+    <Property Name="UserLastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ConfirmationDOC" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserAddress" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserProfile" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserPass" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="WalletID" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PayTestDBModelStoreContainer">
+    <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
